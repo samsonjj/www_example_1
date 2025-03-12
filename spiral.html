@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <style>
+        #root {
+            width: 100px;
+            height: 100px;
+        }
+        /* .rotate {
+            transform: rotate(.02turn);
+            transform-origin: center;
+        } */
+
+        .box {
+            /* margin: 30px; */
+        }
+
+        .purple {
+            background-color: rebeccapurple;
+        }
+
+        .inner {
+            width: 90%;
+            height: 90%;
+            margin: 5px 5px 5px 5px;
+        }
+
+        /* .guide {
+            opacity: 0.50;
+            border-color: red;
+            border-width: 5px;
+            border-style: dashed;
+            z-index: 100;
+        } */
+    </style>
+</head>
+
+<body>
+    <!-- <div id="root" class="guide" style="position: absolute;">
+        <div class="box rotate">
+        </div>
+    </div> -->
+    <div id="root" class="box rotate purple">
+        <div class="box purple inner" style="background-color: red;">
+        </div>
+    </div>
+</body>
+<script>
+    // const depth = 10;
+    // var curr = document.getElementById("root");
+    // for (var i = 0; i < depth; i++) {
+    //     let inner = new HTMLDivElement();
+    //     inner.style.rotate = 'rotate(0.8turn)';
+    //     inner.className = 'box';
+    //     curr.appendChild(inner);
+    //     curr = inner;
+    // }
+</script>
+
+</html>
