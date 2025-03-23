@@ -2,100 +2,117 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pebble's Palace Home Page</title>
-    <!-- <base href="http://127.0.0.1"></base> -->
-    <link rel="stylesheet" href="index.css" />
-    <link rel="icon" href="cat-svgrepo-com.svg" />
-    <style blocking="render">
-        * {
-            font-family: monospace;
-        }
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Pebble's Palace Home Page</title>
+	<!-- <base href="http://127.0.0.1"></base> -->
+	<link rel="stylesheet" href="index.css" />
+	<link rel="icon" href="cat-svgrepo-com.svg" />
+	<style blocking="render">
+		* {
+			font-family: monospace;
+			margin: 0rem;
+			padding: 0rem;
+			box-sizing: border-box;
 
-        h1 {
-            color: darkblue;
-        }
+			/* font-family: Inter, sans-serif; */
+			/* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+			font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+			color: rgb(77, 91, 124);
+		}
 
-        p {
-            margin: 0px;
-            padding: 0px;
-        }
+		span {
+			background: yellow;
+		}
 
-        main p {
-            margin-bottom: 10px;
-        }
+		header {
+			margin-bottom: 1rem;
+			display: inline;
+		}
 
-        header p {
-            margin-bottom: 0px;
-        }
+		h1 {
+			color: darkblue;
+			margin-bottom: 1rem;
+		}
 
-        footer p {
-            color: gray;
-            font-style: italic;
-            margin-top: 20px;
-        }
+		p {
+			margin: 0px;
+			padding: 0px;
+		}
 
-        abbr:hover:after {
-            content: " (" attr(title) ")";
-        }
+		.content p {
+			margin-bottom: 1rem;
+		}
 
-        #time-container {
-            text-align: right;
-        }
+		footer p {
+			color: gray;
+			font-style: italic;
+			margin-top: 2rem;
+		}
 
-        #time-display {
-            color: green;
-        }
-    </style>
-</head>
+		abbr:hover:after {
+			content: " (" attr(title) ")";
+		}
 
-<head>
-    <style>
-        p {
-            color: black;
-        }
-    </style>
+		#time-container {
+			text-align: right;
+
+		}
+
+		#time-display {
+			color: green;
+		}
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 
 <body id="body">
-    <div id="time-container">
-        Page loaded at: <span id="time-display"></span>
-    </div>
-    <main>
-        <article>
-            <header>
-                <img src="cat-svgrepo-com.svg" style="width: 100px" />
-                <p style="white-space: pre-line">
-                    Author: Jonathan Samson
-                    <address style="white-space: pre-line"
-                    >Email: <a
-                        rel="author"
-                        href="mailto:jonathansamsonvcu@gmail.com"
-                    >jonathansamsonvcu@gmail.com</a>
-                    Phone: <a rel="author" href="tel:+18044053008">+1 (804) 405-3008</a></address>
-                <time>Time: 2025.03.02</time>
-                </p>
-                <h1>Title: Pebble is a Brat</h1>
-            </header>
-            <p>Pebble is definitely a brat.</p>
-            <p>She likes to hit her sister and also eat all her owner's earplugs. They don't very much appreciate it.</p>
-            <p>They call her <abbr title="Pebble Brat, Princess Butthole, Petulant Baby">PB</abbr>.</p>
-            <p>Her sister, Nemi, had a few nice things to say about Pebble:</p>
-            <blockquote>"She's really fast! And, and likes to play. And is super strong... and really fast!"</blockquote>
-            <p>When asked to comment on her own roudy and petulant nature, Pebble responded, <q>F*** you, give me food.</q></p>
-            <p>Though sometimes she is nice. She protects her owners while they poop.</p>
-            <footer>
-                <p>Thanks for reading.</p>
-                <a download="" href="./">Download this article</a>
-            </footer>
-            <script>
-                const $ = (id) => document.getElementById(id);
-                $("time-display").innerHTML += (new Date()).toTimeString();
-                console.log('hi');
-            </script>
-        </article>
-    </main>
+	<div id="nav-placeholder"></div>
+	<main>
+		<article>
+			<header>
+				<img class="float-left" src="cat-svgrepo-com.svg" style="width: 100px" />
+				<p style="white-space: pre-line">
+					Author: Jonathan Samson
+				</p>
+				<address style="white-space: pre-line">Email: <a rel="author"
+						href="mailto:jonathansamsonvcu@gmail.com">jonathansamsonvcu@gmail.com</a> Phone: <a rel="author"
+						href="tel:+18044053008">+1 (804) 405-3008</a></address><time>Time: 2025.03.02</time>
+			</header>
+			<div class="content">
+				<br/>
+				<h1>Title: Pebble is a Brat</h1>
+				<p>Pebble is definitely a brat.</p>
+				<p>She likes to hit her sister and also eat all her owner's earplugs. They don't very much appreciate
+					it.
+				</p>
+				<p>They call her <abbr title="Pebble Brat, Princess Butthole, Petulant Baby">PB</abbr>.</p>
+				<p>Her sister, Nemi, had a few nice things to say about Pebble:</p>
+				<blockquote>"She's really fast! And, and likes to play. And is super strong... and really fast!"
+				</blockquote>
+				<p>When asked to comment on her own roudy and petulant nature, Pebble responded, <q>F*** you, give me
+						food.</q></p>
+				<p>Though sometimes she is nice. She protects her owners while they poop.</p>
+			</div>
+			<footer>
+				<p>Thanks for reading.</p>
+				<a download="" href="./">Download this article</a>
+				<div id="time-container">
+					Page loaded at: <span id="time-display"></span>
+				</div>
+			</footer>
+			<script>
+				$("#time-display").html((new Date()).toTimeString());
+			</script>
+		</article>
+	</main>
+
+	<script>
+		window.onload = () => {
+			console.log('hello');
+		}	
+	</script>
+	<script src="global.js"></script>
 </body>
 
 </html>
